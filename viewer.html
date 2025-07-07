@@ -39,7 +39,9 @@
         const pdfUrl = getPDFUrl();
         const pageNumber = getPageNumber();
         if (pdfUrl) {
-            const viewerUrl = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(pdfUrl) + '#page=' + pageNumber;
+            /*const viewerUrl = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(pdfUrl) + '#page=' + pageNumber;
+            document.getElementById('pdf-viewer').src = viewerUrl;*/
+            const viewerUrl = 'https://athenablobstorage1.blob.core.windows.net/powerapps-team/web/viewer.html?file=' + encodeURIComponent(pdfUrl) + '#page=' + pageNumber;
             document.getElementById('pdf-viewer').src = viewerUrl;
         } else {
             document.body.innerHTML = '<p style="text-align:center;margin-top:20px;">No se proporcionó ninguna URL de archivo PDF.</p>';
